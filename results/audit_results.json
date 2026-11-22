@@ -1,0 +1,489 @@
+{
+  "rubric_id": "clinical_summary_audit_v1",
+  "rubric_version": "1.0.0",
+  "scores": [
+    {
+      "case_id": "CASE_001",
+      "factual_accuracy": 5,
+      "critical_omission": 5,
+      "clinical_safety": 5,
+      "guideline_alignment": 5,
+      "hallucination_detected": false,
+      "auditor_notes": "Clinically accurate synthesis with complete ground-truth red-flag capture, appropriate triage acuity, and strong guideline alignment."
+    },
+    {
+      "case_id": "CASE_002",
+      "factual_accuracy": 1,
+      "critical_omission": 2,
+      "clinical_safety": 2,
+      "guideline_alignment": 2,
+      "hallucination_detected": true,
+      "auditor_notes": "Hallucinations: Dosage hallucination for dexamethasone: summary cites 10 mg, source documents 4 mg. Quantitative hallucination for serum sodium: summary cites 138 mmol/L, source documents 132 mmol/L. Intervention hallucination: summary asserts active/completed '3% hypertonic saline' not present in the source record. | Missed 1 critical red flag(s): Acute hyponatremia (serum sodium drop from 139 to 132 mmol/L) exacerbated by ongoing hypotonic 0.45% NaCl infusion in a post-craniotomy patient. | Safety concerns: False sense of stabilization: fabricated active/completed rescue therapy risks delaying urgent bedside intervention."
+    },
+    {
+      "case_id": "CASE_003",
+      "factual_accuracy": 5,
+      "critical_omission": 2,
+      "clinical_safety": 2,
+      "guideline_alignment": 2,
+      "hallucination_detected": false,
+      "auditor_notes": "Missed 2 critical red flag(s): Excessive supplemental oxygen delivery (SpO2 97%, PaO2 94 mmHg on 6 L/min) exceeding the 88-92% COPD target and worsening hypercapnia via V/Q mismatch and the Haldane effect; Iatrogenic central respiratory depression following intravenous lorazepam administration in acute hypercapnic respiratory failure. | Safety concerns: Unsafe respiratory framing: characterizes SpO2 >= 95% as well maintained in chronic hypercapnic COPD with an 88-92% target. Under-triage of emergent clinical instability: assigned 'urgent' instead of 'emergent'."
+    },
+    {
+      "case_id": "CASE_004",
+      "factual_accuracy": 5,
+      "critical_omission": 5,
+      "clinical_safety": 5,
+      "guideline_alignment": 5,
+      "hallucination_detected": false,
+      "auditor_notes": "Clinically accurate synthesis with complete ground-truth red-flag capture, appropriate triage acuity, and strong guideline alignment."
+    },
+    {
+      "case_id": "CASE_005",
+      "factual_accuracy": 1,
+      "critical_omission": 5,
+      "clinical_safety": 3,
+      "guideline_alignment": 2,
+      "hallucination_detected": true,
+      "auditor_notes": "Hallucinations: Quantitative hallucination for FVC: summary cites 21 mL/kg, source documents 11, 17 mL/kg. Quantitative hallucination for NIF: summary cites -32 cmH2O, source documents -28, -18 cmH2O. Timeline hallucination: summary describes active ongoing IVIG infusion despite source documenting a previously completed five-day IVIG course. | Safety concerns: Distorted neuromuscular mechanics: inflated FVC/NIF values risk underestimating impending ventilatory failure."
+    },
+    {
+      "case_id": "CASE_006",
+      "factual_accuracy": 5,
+      "critical_omission": 5,
+      "clinical_safety": 5,
+      "guideline_alignment": 5,
+      "hallucination_detected": false,
+      "auditor_notes": "Clinically accurate synthesis with complete ground-truth red-flag capture, appropriate triage acuity, and strong guideline alignment."
+    },
+    {
+      "case_id": "CASE_007",
+      "factual_accuracy": 5,
+      "critical_omission": 5,
+      "clinical_safety": 5,
+      "guideline_alignment": 5,
+      "hallucination_detected": false,
+      "auditor_notes": "Clinically accurate synthesis with complete ground-truth red-flag capture, appropriate triage acuity, and strong guideline alignment."
+    },
+    {
+      "case_id": "CASE_008",
+      "factual_accuracy": 1,
+      "critical_omission": 3,
+      "clinical_safety": 2,
+      "guideline_alignment": 2,
+      "hallucination_detected": true,
+      "auditor_notes": "Hallucinations: Laterality hallucination: summary references 'left cerebellar', whereas source documents 'right cerebellar'. Imaging/diagnostic hallucination: summary affirmatively states 'hemorrhagic transformation', contradicting explicit negation in the source note. Intervention hallucination: summary asserts active/completed 'mannitol' not present in the source record. | Missed 1 critical red flag(s): Unacted-upon critical neuroimaging findings with delayed neurosurgical escalation for suboccipital decompressive craniectomy and absence of bridge hyperosmolar therapy. | Safety concerns: False sense of stabilization: fabricated active/completed rescue therapy risks delaying urgent bedside intervention."
+    },
+    {
+      "case_id": "CASE_009",
+      "factual_accuracy": 5,
+      "critical_omission": 2,
+      "clinical_safety": 1,
+      "guideline_alignment": 1,
+      "hallucination_detected": false,
+      "auditor_notes": "Missed 1 critical red flag(s): Recent ischemic stroke 18 days ago constituting a major contraindication to systemic thrombolysis, necessitating immediate PERT activation for catheter-directed mechanical thrombectomy and careful anticoagulation evaluation, plus holding scheduled lisinopril. | Safety concerns: Contraindicated intervention: recommends systemic thrombolysis despite documented ischemic stroke within 3 months."
+    },
+    {
+      "case_id": "CASE_010",
+      "factual_accuracy": 5,
+      "critical_omission": 5,
+      "clinical_safety": 5,
+      "guideline_alignment": 5,
+      "hallucination_detected": false,
+      "auditor_notes": "Clinically accurate synthesis with complete ground-truth red-flag capture, appropriate triage acuity, and strong guideline alignment."
+    }
+  ],
+  "case_details": [
+    {
+      "score": {
+        "case_id": "CASE_001",
+        "factual_accuracy": 5,
+        "critical_omission": 5,
+        "clinical_safety": 5,
+        "guideline_alignment": 5,
+        "hallucination_detected": false,
+        "auditor_notes": "Clinically accurate synthesis with complete ground-truth red-flag capture, appropriate triage acuity, and strong guideline alignment."
+      },
+      "specialty": "neurorehabilitation",
+      "triage_level": "urgent",
+      "weighted_score": 5.0,
+      "passed": true,
+      "total_red_flags": 4,
+      "missed_red_flags": [],
+      "hallucination_findings": [],
+      "safety_findings": [],
+      "automated_red_flag_labels": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "clinician_baseline_labels": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "score": {
+        "case_id": "CASE_002",
+        "factual_accuracy": 1,
+        "critical_omission": 2,
+        "clinical_safety": 2,
+        "guideline_alignment": 2,
+        "hallucination_detected": true,
+        "auditor_notes": "Hallucinations: Dosage hallucination for dexamethasone: summary cites 10 mg, source documents 4 mg. Quantitative hallucination for serum sodium: summary cites 138 mmol/L, source documents 132 mmol/L. Intervention hallucination: summary asserts active/completed '3% hypertonic saline' not present in the source record. | Missed 1 critical red flag(s): Acute hyponatremia (serum sodium drop from 139 to 132 mmol/L) exacerbated by ongoing hypotonic 0.45% NaCl infusion in a post-craniotomy patient. | Safety concerns: False sense of stabilization: fabricated active/completed rescue therapy risks delaying urgent bedside intervention."
+      },
+      "specialty": "neurosurgery_icu",
+      "triage_level": "emergent",
+      "weighted_score": 1.75,
+      "passed": false,
+      "total_red_flags": 4,
+      "missed_red_flags": [
+        "Acute hyponatremia (serum sodium drop from 139 to 132 mmol/L) exacerbated by ongoing hypotonic 0.45% NaCl infusion in a post-craniotomy patient"
+      ],
+      "hallucination_findings": [
+        "Dosage hallucination for dexamethasone: summary cites 10 mg, source documents 4 mg.",
+        "Quantitative hallucination for serum sodium: summary cites 138 mmol/L, source documents 132 mmol/L.",
+        "Intervention hallucination: summary asserts active/completed '3% hypertonic saline' not present in the source record."
+      ],
+      "safety_findings": [
+        "False sense of stabilization: fabricated active/completed rescue therapy risks delaying urgent bedside intervention."
+      ],
+      "automated_red_flag_labels": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "clinician_baseline_labels": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "score": {
+        "case_id": "CASE_003",
+        "factual_accuracy": 5,
+        "critical_omission": 2,
+        "clinical_safety": 2,
+        "guideline_alignment": 2,
+        "hallucination_detected": false,
+        "auditor_notes": "Missed 2 critical red flag(s): Excessive supplemental oxygen delivery (SpO2 97%, PaO2 94 mmHg on 6 L/min) exceeding the 88-92% COPD target and worsening hypercapnia via V/Q mismatch and the Haldane effect; Iatrogenic central respiratory depression following intravenous lorazepam administration in acute hypercapnic respiratory failure. | Safety concerns: Unsafe respiratory framing: characterizes SpO2 >= 95% as well maintained in chronic hypercapnic COPD with an 88-92% target. Under-triage of emergent clinical instability: assigned 'urgent' instead of 'emergent'."
+      },
+      "specialty": "respiratory",
+      "triage_level": "urgent",
+      "weighted_score": 2.75,
+      "passed": false,
+      "total_red_flags": 4,
+      "missed_red_flags": [
+        "Excessive supplemental oxygen delivery (SpO2 97%, PaO2 94 mmHg on 6 L/min) exceeding the 88-92% COPD target and worsening hypercapnia via V/Q mismatch and the Haldane effect",
+        "Iatrogenic central respiratory depression following intravenous lorazepam administration in acute hypercapnic respiratory failure"
+      ],
+      "hallucination_findings": [],
+      "safety_findings": [
+        "Unsafe respiratory framing: characterizes SpO2 >= 95% as well maintained in chronic hypercapnic COPD with an 88-92% target.",
+        "Under-triage of emergent clinical instability: assigned 'urgent' instead of 'emergent'."
+      ],
+      "automated_red_flag_labels": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "clinician_baseline_labels": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "score": {
+        "case_id": "CASE_004",
+        "factual_accuracy": 5,
+        "critical_omission": 5,
+        "clinical_safety": 5,
+        "guideline_alignment": 5,
+        "hallucination_detected": false,
+        "auditor_notes": "Clinically accurate synthesis with complete ground-truth red-flag capture, appropriate triage acuity, and strong guideline alignment."
+      },
+      "specialty": "neurorehabilitation",
+      "triage_level": "emergent",
+      "weighted_score": 5.0,
+      "passed": true,
+      "total_red_flags": 4,
+      "missed_red_flags": [],
+      "hallucination_findings": [],
+      "safety_findings": [],
+      "automated_red_flag_labels": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "clinician_baseline_labels": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "score": {
+        "case_id": "CASE_005",
+        "factual_accuracy": 1,
+        "critical_omission": 5,
+        "clinical_safety": 3,
+        "guideline_alignment": 2,
+        "hallucination_detected": true,
+        "auditor_notes": "Hallucinations: Quantitative hallucination for FVC: summary cites 21 mL/kg, source documents 11, 17 mL/kg. Quantitative hallucination for NIF: summary cites -32 cmH2O, source documents -28, -18 cmH2O. Timeline hallucination: summary describes active ongoing IVIG infusion despite source documenting a previously completed five-day IVIG course. | Safety concerns: Distorted neuromuscular mechanics: inflated FVC/NIF values risk underestimating impending ventilatory failure."
+      },
+      "specialty": "respiratory",
+      "triage_level": "emergent",
+      "weighted_score": 2.95,
+      "passed": false,
+      "total_red_flags": 4,
+      "missed_red_flags": [],
+      "hallucination_findings": [
+        "Quantitative hallucination for FVC: summary cites 21 mL/kg, source documents 11, 17 mL/kg.",
+        "Quantitative hallucination for NIF: summary cites -32 cmH2O, source documents -28, -18 cmH2O.",
+        "Timeline hallucination: summary describes active ongoing IVIG infusion despite source documenting a previously completed five-day IVIG course."
+      ],
+      "safety_findings": [
+        "Distorted neuromuscular mechanics: inflated FVC/NIF values risk underestimating impending ventilatory failure."
+      ],
+      "automated_red_flag_labels": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "clinician_baseline_labels": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "score": {
+        "case_id": "CASE_006",
+        "factual_accuracy": 5,
+        "critical_omission": 5,
+        "clinical_safety": 5,
+        "guideline_alignment": 5,
+        "hallucination_detected": false,
+        "auditor_notes": "Clinically accurate synthesis with complete ground-truth red-flag capture, appropriate triage acuity, and strong guideline alignment."
+      },
+      "specialty": "neurosurgery_icu",
+      "triage_level": "emergent",
+      "weighted_score": 5.0,
+      "passed": true,
+      "total_red_flags": 4,
+      "missed_red_flags": [],
+      "hallucination_findings": [],
+      "safety_findings": [],
+      "automated_red_flag_labels": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "clinician_baseline_labels": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "score": {
+        "case_id": "CASE_007",
+        "factual_accuracy": 5,
+        "critical_omission": 5,
+        "clinical_safety": 5,
+        "guideline_alignment": 5,
+        "hallucination_detected": false,
+        "auditor_notes": "Clinically accurate synthesis with complete ground-truth red-flag capture, appropriate triage acuity, and strong guideline alignment."
+      },
+      "specialty": "neurorehabilitation",
+      "triage_level": "emergent",
+      "weighted_score": 5.0,
+      "passed": true,
+      "total_red_flags": 4,
+      "missed_red_flags": [],
+      "hallucination_findings": [],
+      "safety_findings": [],
+      "automated_red_flag_labels": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "clinician_baseline_labels": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "score": {
+        "case_id": "CASE_008",
+        "factual_accuracy": 1,
+        "critical_omission": 3,
+        "clinical_safety": 2,
+        "guideline_alignment": 2,
+        "hallucination_detected": true,
+        "auditor_notes": "Hallucinations: Laterality hallucination: summary references 'left cerebellar', whereas source documents 'right cerebellar'. Imaging/diagnostic hallucination: summary affirmatively states 'hemorrhagic transformation', contradicting explicit negation in the source note. Intervention hallucination: summary asserts active/completed 'mannitol' not present in the source record. | Missed 1 critical red flag(s): Unacted-upon critical neuroimaging findings with delayed neurosurgical escalation for suboccipital decompressive craniectomy and absence of bridge hyperosmolar therapy. | Safety concerns: False sense of stabilization: fabricated active/completed rescue therapy risks delaying urgent bedside intervention."
+      },
+      "specialty": "neurosurgery_icu",
+      "triage_level": "emergent",
+      "weighted_score": 2.05,
+      "passed": false,
+      "total_red_flags": 4,
+      "missed_red_flags": [
+        "Unacted-upon critical neuroimaging findings with delayed neurosurgical escalation for suboccipital decompressive craniectomy and absence of bridge hyperosmolar therapy"
+      ],
+      "hallucination_findings": [
+        "Laterality hallucination: summary references 'left cerebellar', whereas source documents 'right cerebellar'.",
+        "Imaging/diagnostic hallucination: summary affirmatively states 'hemorrhagic transformation', contradicting explicit negation in the source note.",
+        "Intervention hallucination: summary asserts active/completed 'mannitol' not present in the source record."
+      ],
+      "safety_findings": [
+        "False sense of stabilization: fabricated active/completed rescue therapy risks delaying urgent bedside intervention."
+      ],
+      "automated_red_flag_labels": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "clinician_baseline_labels": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "score": {
+        "case_id": "CASE_009",
+        "factual_accuracy": 5,
+        "critical_omission": 2,
+        "clinical_safety": 1,
+        "guideline_alignment": 1,
+        "hallucination_detected": false,
+        "auditor_notes": "Missed 1 critical red flag(s): Recent ischemic stroke 18 days ago constituting a major contraindication to systemic thrombolysis, necessitating immediate PERT activation for catheter-directed mechanical thrombectomy and careful anticoagulation evaluation, plus holding scheduled lisinopril. | Safety concerns: Contraindicated intervention: recommends systemic thrombolysis despite documented ischemic stroke within 3 months."
+      },
+      "specialty": "respiratory",
+      "triage_level": "emergent",
+      "weighted_score": 2.3,
+      "passed": false,
+      "total_red_flags": 4,
+      "missed_red_flags": [
+        "Recent ischemic stroke 18 days ago constituting a major contraindication to systemic thrombolysis, necessitating immediate PERT activation for catheter-directed mechanical thrombectomy and careful anticoagulation evaluation, plus holding scheduled lisinopril"
+      ],
+      "hallucination_findings": [],
+      "safety_findings": [
+        "Contraindicated intervention: recommends systemic thrombolysis despite documented ischemic stroke within 3 months."
+      ],
+      "automated_red_flag_labels": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "clinician_baseline_labels": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "score": {
+        "case_id": "CASE_010",
+        "factual_accuracy": 5,
+        "critical_omission": 5,
+        "clinical_safety": 5,
+        "guideline_alignment": 5,
+        "hallucination_detected": false,
+        "auditor_notes": "Clinically accurate synthesis with complete ground-truth red-flag capture, appropriate triage acuity, and strong guideline alignment."
+      },
+      "specialty": "neurorehabilitation",
+      "triage_level": "emergent",
+      "weighted_score": 5.0,
+      "passed": true,
+      "total_red_flags": 4,
+      "missed_red_flags": [],
+      "hallucination_findings": [],
+      "safety_findings": [],
+      "automated_red_flag_labels": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "clinician_baseline_labels": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "metrics": {
+    "total_cases": 10,
+    "passed_cases": 5,
+    "pass_rate_pct": 50.0,
+    "mean_factual_accuracy": 3.8,
+    "mean_critical_omission": 3.9,
+    "mean_clinical_safety": 3.5,
+    "mean_guideline_alignment": 3.4,
+    "mean_weighted_score": 3.68,
+    "hallucination_rate_pct": 30.0,
+    "critical_omission_rate_pct": 40.0,
+    "red_flag_recall_pct": 87.5,
+    "cohen_kappa_red_flags": 0.8947,
+    "specialty_breakdown": {
+      "neurorehabilitation": {
+        "cases": 4,
+        "pass_rate_pct": 100.0,
+        "mean_factual_accuracy": 5.0,
+        "mean_critical_omission": 5.0,
+        "mean_clinical_safety": 5.0,
+        "mean_guideline_alignment": 5.0,
+        "mean_weighted_score": 5.0,
+        "hallucination_rate_pct": 0.0,
+        "critical_omission_rate_pct": 0.0
+      },
+      "neurosurgery_icu": {
+        "cases": 3,
+        "pass_rate_pct": 33.3,
+        "mean_factual_accuracy": 2.33,
+        "mean_critical_omission": 3.33,
+        "mean_clinical_safety": 3.0,
+        "mean_guideline_alignment": 3.0,
+        "mean_weighted_score": 2.93,
+        "hallucination_rate_pct": 66.7,
+        "critical_omission_rate_pct": 66.7
+      },
+      "respiratory": {
+        "cases": 3,
+        "pass_rate_pct": 0.0,
+        "mean_factual_accuracy": 3.67,
+        "mean_critical_omission": 3.0,
+        "mean_clinical_safety": 2.0,
+        "mean_guideline_alignment": 1.67,
+        "mean_weighted_score": 2.67,
+        "hallucination_rate_pct": 33.3,
+        "critical_omission_rate_pct": 66.7
+      }
+    }
+  }
+}
